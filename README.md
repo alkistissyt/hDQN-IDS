@@ -1,17 +1,22 @@
 # hDQN-IDS
 
 # A Hierarchical Reinforcement Learning Framework for Resource-Aware Intrusion Detection
+A reinforcement learning-based intrusion detection system using **hierarchical Deep Q-Networks (h-DQN)** with adaptive computational cost management. This repository supports my bachelor thesis on designing and implementing a hierarchical reinforcement learning (HRL) system for intrusion detection using multiple network security datasets. The framework aims to detect network intrusions while balancing detection performance with computational resource usage.
 
-This repository supports my bachelor thesis on designing and implementing a **hierarchical reinforcement learning (HRL)** system for intrusion detection using the **CIC-IDS2017** dataset. The framework aims to detect network intrusions while balancing detection performance with computational resource usage.
+🎯 What This Offers
+
+Hierarchical Architecture: Manager agent selects detection mode, Worker agent makes classification decisions
+Resource Management: A Manager agent is introduced to handle intelligent resource allocation. Based on real-time system load and threat level assessments, the agent selects between lightweight and intensive analysis modes
+Multi-Dataset Support: Works with CICIDS2017, NF-ToN-IoT, Edge-IIoTset, BoT-IoT
+Adaptive PCA: Automatically selects optimal feature dimensions based on variance preservation
+Smart Cost Management: Dynamic computational costs based on system queue length
+Enhanced Rewards: Realistic reward structure for intrusion detection scenarios
 
 ## 📂 Project Structure
-
-The core of the implementation is structured across four main Python scripts:
-
-- `data_preprocessing.py`: Loads, cleans, and prepares the CIC-IDS2017 dataset.
-- `environment.py`: Defines a custom OpenAI Gym environment, including reward logic and interaction with the HRL agent.
-- `train.py`: Training pipeline for both worker and manager agents
-- `Visualisation.py`: Evaluates the trained model using classification metrics (accuracy, precision, recall, F1-score).
+data_preprocessing.py - Generic preprocessing with adaptive PCA for multiple IDS datasets (CICIDS2017, NF-ToN-IoT, Edge-IIoTset, BoT-IoT)
+environment.py - RL environments with hierarchical architecture, smart features, and adaptive computational cost management
+train.py - Complete training pipeline for both worker and manager agents with enhanced metrics tracking
+visualization_diagrams.py - Publication-ready visualization generation using actual training results and performance data
 
 ## 🚀 Getting Started
 
