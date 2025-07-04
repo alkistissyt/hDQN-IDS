@@ -28,14 +28,6 @@ This project leverages four publicly available intrusion detection datasets. Eac
 | **Edge-IIoTset** | Realistic IoT/IIoT dataset with diverse devices and attacks for edge computing | 61 | 2M | Large | [IEEE DataPort](https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications) |
 | **BoT-IoT** | Large-scale IoT network dataset with DDoS, DoS, scanning, and botnet attacks | 10 | 600k | Small | [UNSW Canberra](https://research.unsw.edu.au/projects/bot-iot-dataset) |
 
-
-## Usage Notes
-
-- All datasets are publicly available for research purposes
-- Check individual dataset licenses and terms of use before downloading
-- Consider computational requirements for processing large datasets
-
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -57,7 +49,7 @@ git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
 
-### 2. Install Dependencies
+### 1. Install Dependencies
 
 Make sure Python 3.8+ is installed, then run:
 
@@ -67,7 +59,7 @@ pip install -r requirements.txt
 
 ### 3. Prepare the Datasets
 
-Download the datasets listed in the 📊 Datasets section and place the raw files (CSV or NetFlow) into the `data/` directory.
+Download the datasets listed in the Datasets section and place the raw files (CSV) into the `data/` directory.
 
 Then preprocess the data:
 
@@ -75,25 +67,10 @@ Then preprocess the data:
 python data_preprocessing.py
 ```
 
-### 4. Initialize the Custom Environment (Optional)
-
-To manually test or explore the custom OpenAI Gym environment defined in `environment.py`:
-
-```python
-# Example: run in a Python shell or Jupyter notebook
-from environment import IntrusionDetectionEnv
-
-env = IntrusionDetectionEnv()
-obs = env.reset()
-
-for _ in range(10):
-    action = env.action_space.sample()
-    obs, reward, done, info = env.step(action)
-    print(f"Reward: {reward}")
-    if done:
-        obs = env.reset()
+### 4. Initialize the Custom Environment 
+```bash
+python Environment.py
 ```
-
 ### 5. Train the Model
 
 Run the training script for the Hierarchical Deep Q-Network (h-DQN):
@@ -101,22 +78,18 @@ Run the training script for the Hierarchical Deep Q-Network (h-DQN):
 ```bash
 python train.py
 ```
+You'll receive evaluation metrics like accuracy, precision, recall, and F1-score.
 
-### 6. Evaluate the Model
-
-After training completes:
-
-```bash
-python evaluate.py
-```
-
-You'll receive metrics like accuracy, precision, recall, and F1-score.
-
-### 7. Visualize Results (Optional)
+### 6. Visualize Results (Optional)
 
 To generate reward curves, confusion matrices, or other performance plots:
 
 ```bash
 python visualization_diagrams.py
 ```
+## Usage Notes
+
+- All datasets are publicly available for research purposes
+- Check individual dataset licenses and terms of use before downloading
+- Consider computational requirements for processing large datasets
 
