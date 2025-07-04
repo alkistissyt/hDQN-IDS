@@ -19,38 +19,45 @@ A reinforcement learning-based intrusion detection system using **hierarchical D
 - `Visualization.py` - Publication-ready visualization generation using actual training results and performance data
 
 ## 📊 Datasets
-This project leverages four publicly available intrusion detection datasets. Download them using the links below:
+This project leverages four publicly available intrusion detection datasets. Each offers different characteristics and attack types suitable for evaluating network-based detection systems. Download them using the links below:
 
--CIC‑IDS2017 – Benign and modern attack traffic, in CSV/PCAP formats.
+- CIC‑IDS2017 – A
 Official download: http://www.unb.ca/cic/datasets/ids-2017.html 
-
--NF‑ToN‑IoT – NetFlow version of ToN‑IoT, labeled for multiple IoT attack types.
+- NF‑ToN‑IoT – NetFlow version of ToN‑IoT, labeled for multiple IoT attack types.
 Official download: https://espace.library.uq.edu.au/view/UQ%3A44d7c5e 
-
--Edge‑IIoTset – Realistic IoT/IIoT dataset with diverse devices and attacks.
+- Edge‑IIoTset – Realistic IoT/IIoT dataset with diverse devices and attacks.
 Official download (IEEE DataPort): https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications 
 unb.ca
+- BoT‑IoT – IoT network dataset containing DDoS, DoS, scanning, and more.
+Official download (UNSW Canberra/Impact Cyber Trust): https://research.unsw.edu.au/projects/bot-iot-dataset
 
--BoT‑IoT – IoT network dataset containing DDoS, DoS, scanning, and more.
-Official download (UNSW Canberra/Impact Cyber Trust): https://research.unsw.edu.au/projects/bot-iot-dataset 
+Datasets Supported
 
-Datasets
-This project uses four publicly available intrusion detection datasets. Each offers different characteristics and attack types suitable for evaluating network-based detection systems.
+# IoT/IIoT Cybersecurity Datasets
 
-🔹 CIC‑IDS2017
-A modern dataset containing labeled benign and attack traffic captured in realistic network conditions, including DoS, DDoS, brute force, infiltration, and web-based attacks.
-📁 Formats: CSV, PCAP
-📍 Source: Canadian Institute for Cybersecurity (UNB)
+## Available Datasets
 
-🔹 NF‑ToN‑IoT
-A NetFlow-based version of the ToN‑IoT dataset tailored for IoT networks. Includes multi-class attack labels (e.g., DDoS, injection, ransomware, backdoor) and represents industrial and consumer IoT environments.
-📁 Formats: NetFlow CSV
-📍 Source: University of Queensland
+| Dataset | Description | Features | Official Download |
+|---------|-------------|----------|-------------------|
+| **CIC-IDS2017** | Comprehensive intrusion detection dataset containing benign and malicious network traffic with realistic background traffic patterns. Includes various attack types such as Brute Force, Heartbleed, Botnet, DoS, DDoS, Web Attack, and Infiltration attacks captured over 5 days. | 78+ features including flow duration, packet statistics, flags, and protocol information | [University of New Brunswick](http://www.unb.ca/cic/datasets/ids-2017.html) |
+| **NF-ToN-IoT** | NetFlow version of the ToN-IoT dataset specifically designed for IoT environments. Features network traffic data labeled for multiple IoT attack types including backdoor, DDoS, injection, MITM, password attacks, ransomware, scanning, and XSS attacks across various IoT devices and protocols. | NetFlow-based features including source/destination IPs, ports, protocols, flow statistics, and attack labels | [University of Queensland eSpace](https://espace.library.uq.edu.au/view/UQ%3A44d7c5e) |
+| **Edge-IIoTset** | New comprehensive and realistic cybersecurity dataset for IoT and Industrial IoT (IIoT) applications. Contains diverse IoT/IIoT devices and attack scenarios designed to reflect real-world edge computing environments with multiple attack vectors and device types. | Comprehensive feature set covering IoT device behaviors, network traffic patterns, and attack signatures across edge computing scenarios | [IEEE DataPort](https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications) |
+| **BoT-IoT** | Large-scale IoT network dataset containing various attack types including DDoS, DoS, reconnaissance scanning, theft, and keylogging attacks. Generated using realistic IoT device simulations and network topologies to provide comprehensive coverage of IoT security threats. | 40+ features including network flow statistics, packet information, protocol details, and behavioral patterns of IoT devices under normal and attack conditions | [UNSW Canberra Cyber](https://research.unsw.edu.au/projects/bot-iot-dataset) |
 
-🔹 Edge‑IIoTset
-A comprehensive and realistic cybersecurity dataset for edge and industrial IoT (IIoT) applications. Covers a wide range of attacks across multiple edge devices with time-sequenced behavior.
-📁 Formats: CSV
-📍 Source: IEEE DataPort
+## Dataset Characteristics
+
+- **CIC-IDS2017**: Multi-day capture with labeled attack phases and realistic background traffic
+- **NF-ToN-IoT**: Focus on IoT-specific attacks with NetFlow feature representation
+- **Edge-IIoTset**: Emphasizes edge computing and Industrial IoT scenarios
+- **BoT-IoT**: Large-scale IoT botnet and attack simulation data
+
+## Usage Notes
+
+- All datasets are publicly available for research purposes
+- Check individual dataset licenses and terms of use before downloading
+- Datasets vary in size from several GB to multiple TB
+- Consider computational requirements for processing large datasets
+
 
 ## 🚀 Getting Started
 
