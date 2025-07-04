@@ -28,6 +28,20 @@ A reinforcement learning-based intrusion detection system using **hierarchical D
   ```bash
   pip install -r requirements.txt
 
+### Running the Code
+Preprocess the data:
+
+ ```bash
+python Preprocessing.py
+Initiate costum Environment
+ ```bash
+python Environmpent.py
+
+Train the model:
+
+ ```bash
+python Train.py
+
 
 ## 📊 Datasets Supported
 
