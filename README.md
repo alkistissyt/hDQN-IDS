@@ -52,5 +52,5 @@ To generate reward curves, confusion matrices, or other performance plots: ``` p
 - All datasets are publicly available for research purposes
 - Check individual dataset licenses and terms of use before downloading
 - Consider computational requirements for processing large datasets
-- All trained models will be saved in the models/ folder.
+- All trained models will be saved in the `models/` folder.
 
