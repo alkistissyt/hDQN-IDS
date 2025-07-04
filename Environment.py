@@ -4,7 +4,8 @@ Hierarchical Intrusion Detection System Environment
 Implements Gym-compatible environments for training DQN agents
 Updated with new reward formulas and adaptive computational costs
 Integrated with data_preprocessing.py for real intrusion detection datasets
-Supports multiple datasets (CIC-IDS2017, NSL-KDD, UNSW-NB15, etc.)
+Supports multiple datasets (CIC-IDS2017, NSL-KDD, UNSW-NB15 CICIDS2017, NF-
+ToN-IoT, Edge-IIoTset, and BoT-IoT, etc.)
 """
 
 import gymnasium as gym
