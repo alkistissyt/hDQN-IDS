@@ -13,7 +13,7 @@ A reinforcement learning-based intrusion detection system using **hierarchical D
 - **Enhanced Rewards**: Realistic reward structure for intrusion detection scenarios
 
 ## 📂 Project Structure
-- `data_preprocessing.py` - Generic preprocessing with adaptive PCA for multiple IDS datasets (CICIDS2017, NF-ToN-IoT, Edge-IIoTset, BoT-IoT)
+- `data_preprocessing.py` - Generic preprocessing with adaptive PCA for multiple IDS datasets 
 - `environment.py` - RL environments with hierarchical architecture, smart features, and adaptive computational cost management
 - `train.py`  - Complete training pipeline for both worker and manager agents with enhanced metrics tracking
 - `Visualization.py` - Publication-ready visualization generation using actual training results and performance data
@@ -21,31 +21,12 @@ A reinforcement learning-based intrusion detection system using **hierarchical D
 ## 📊 Datasets
 This project leverages four publicly available intrusion detection datasets. Each offers different characteristics and attack types suitable for evaluating network-based detection systems. Download them using the links below:
 
-- CIC‑IDS2017 – A
-Official download: http://www.unb.ca/cic/datasets/ids-2017.html 
-- NF‑ToN‑IoT – NetFlow version of ToN‑IoT, labeled for multiple IoT attack types.
-Official download: https://espace.library.uq.edu.au/view/UQ%3A44d7c5e 
-- Edge‑IIoTset – Realistic IoT/IIoT dataset with diverse devices and attacks.
-Official download (IEEE DataPort): https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications 
-unb.ca
-- BoT‑IoT – IoT network dataset containing DDoS, DoS, scanning, and more.
-Official download (UNSW Canberra/Impact Cyber Trust): https://research.unsw.edu.au/projects/bot-iot-dataset
-
-Datasets Supported
-
-# IoT/IIoT Cybersecurity Datasets
-
-## Available Datasets
-
-# IoT/IIoT Cybersecurity Datasets
-
 | Dataset | Description | Features | Samples | Size | Download |
 |---------|-------------|----------|---------|------|----------|
 | **CIC-IDS2017** | Network intrusion detection dataset with various attack types (DDoS, DoS, Brute Force, Heartbleed, etc.) | 80 | 2.5M | Large | [UNB](http://www.unb.ca/cic/datasets/ids-2017.html) |
-| **NF-ToN-IoT** | NetFlow version of ToN-IoT dataset labeled for IoT attack types | 43 | 12.9M | Medium | [UQ eSpace](https://espace.library.uq.edu.au/view/UQ%3A44d7c5e) |
+| **NF-ToN-IoT** | NetFlow version of ToN-IoT dataset labeled for IoT attack types | 43 | 12.9M | Very Large | [UQ eSpace](https://espace.library.uq.edu.au/view/UQ%3A44d7c5e) |
 | **Edge-IIoTset** | Realistic IoT/IIoT dataset with diverse devices and attacks for edge computing | 61 | 2M | Large | [IEEE DataPort](https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications) |
-| **BoT-IoT** | Large-scale IoT network dataset with DDoS, DoS, scanning, and botnet attacks | 10 | 600k | Very Large | [UNSW Canberra](https://research.unsw.edu.au/projects/bot-iot-dataset) |
-
+| **BoT-IoT** | Large-scale IoT network dataset with DDoS, DoS, scanning, and botnet attacks | 10 | 600k | Small | [UNSW Canberra](https://research.unsw.edu.au/projects/bot-iot-dataset) |
 
 
 ## Usage Notes
@@ -65,27 +46,77 @@ Datasets Supported
   ```bash
   pip install -r requirements.txt
 
-### Running the Code
-Preprocess the data:
+## 🚀 Usage
 
- ```bash
-python Preprocessing.py
-Initiate costum Environment
- ```bash
-python Environmpent.py
+Follow the steps below to run the full pipeline for the **Hierarchical Reinforcement Learning Intrusion Detection System**.
 
-Train the model:
+### 1. Clone the Repository
 
- ```bash
-python Train.py
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
 
+### 2. Install Dependencies
 
-## 📊 Datasets Supported
+Make sure Python 3.8+ is installed, then run:
 
-| Dataset | Attack Types | Features |
-|---------|--------------|----------|
-| CICIDS2017 | 14 types | 80+ features |
-| NF-ToN-IoT | 9 types | 40+ features |
-| Edge-IIoTset | 15 types | 60+ features |
-| BoT-IoT | 5 types | 40+ features |
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Prepare the Datasets
+
+Download the datasets listed in the 📊 Datasets section and place the raw files (CSV or NetFlow) into the `data/` directory.
+
+Then preprocess the data:
+
+```bash
+python data_preprocessing.py
+```
+
+### 4. Initialize the Custom Environment (Optional)
+
+To manually test or explore the custom OpenAI Gym environment defined in `environment.py`:
+
+```python
+# Example: run in a Python shell or Jupyter notebook
+from environment import IntrusionDetectionEnv
+
+env = IntrusionDetectionEnv()
+obs = env.reset()
+
+for _ in range(10):
+    action = env.action_space.sample()
+    obs, reward, done, info = env.step(action)
+    print(f"Reward: {reward}")
+    if done:
+        obs = env.reset()
+```
+
+### 5. Train the Model
+
+Run the training script for the Hierarchical Deep Q-Network (h-DQN):
+
+```bash
+python train.py
+```
+
+### 6. Evaluate the Model
+
+After training completes:
+
+```bash
+python evaluate.py
+```
+
+You'll receive metrics like accuracy, precision, recall, and F1-score.
+
+### 7. Visualize Results (Optional)
+
+To generate reward curves, confusion matrices, or other performance plots:
+
+```bash
+python visualization_diagrams.py
+```
 
