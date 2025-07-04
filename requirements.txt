@@ -20,10 +20,3 @@ tensorboard>=2.8.0
 
 # System Monitoring
 psutil>=5.8.0
-
-# Data Serialization
-pickle5>=0.0.11
-
-# Optional: For enhanced preprocessing
-# scipy>=1.7.0
-# joblib>=1.1.0
