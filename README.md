@@ -3,18 +3,9 @@
 # A Hierarchical Reinforcement Learning Framework for Resource-Aware Intrusion Detection
 A reinforcement learning-based intrusion detection system using **hierarchical Deep Q-Networks (h-DQN)** with adaptive computational cost management. This repository supports my bachelor thesis on designing and implementing a hierarchical reinforcement learning (HRL) system for intrusion detection using multiple network security datasets. The framework aims to detect network intrusions while balancing detection performance with computational resource usage.
  
-## What This Offers
-
-- **Hierarchical Architecture**: Manager agent selects detection mode, Worker agent makes classification decisions
-- **Resource Management**: A Manager agent is introduced to handle intelligent resource allocation. Based on real-time system load and threat level assessments, the agent selects between lightweight and intensive analysis modes
-- **Multi-Dataset Support**: Works with CICIDS2017, NF-ToN-IoT, Edge-IIoTset, BoT-IoT
-- **Adaptive PCA**: Automatically selects optimal feature dimensions based on variance preservation
-- **Smart Cost Management**: Dynamic computational costs based on system queue length
-- **Enhanced Rewards**: Realistic reward structure for intrusion detection scenarios
-
 ## Project Structure
-- `data_preprocessing.py` - Generic preprocessing with adaptive PCA for multiple IDS datasets 
-- `environment.py` - RL environments with hierarchical architecture, smart features, and adaptive computational cost management
+- `Preprocessing.py` - Generic preprocessing with adaptive PCA for multiple IDS datasets 
+- `Environment.py` - RL environments with hierarchical architecture, smart features, and adaptive computational cost management
 - `train.py`  - Complete training pipeline for both worker and manager agents with enhanced metrics tracking
 - `Visualization.py` - Publication-ready visualization generation using actual training results and performance data
 
@@ -37,7 +28,6 @@ Follow the steps below to run the full pipeline.
 bash git clone https://github.com/alkistissyt/hDQN-IDS.git
 cd alkistissyt/hDQN-IDS
 ```
-
 ### 2. Install Dependencies
 Make sure Python 3.8+ is installed, then run: ``` pip install -r requirements.txt ```
 
@@ -46,9 +36,10 @@ Download the datasets listed in the Datasets section and place the raw files (CS
 Then preprocess the data: ``` python data_preprocessing.py ```
 
 ### 4. Initialize the Custom Environment
-```bash python Environment.py ```
+``` python Environment.py ```
+
 ### 5. Train the Model
-Run the training script for the Hierarchical Deep Q-Network (h-DQN): ```bash python train.py ```
+Run the training script for the Hierarchical Deep Q-Network (h-DQN): ``` python train.py ```
 You'll receive evaluation metrics like accuracy, precision, recall, and F1-score.
 
 ### 5. Visualize Results (Optional)
@@ -59,4 +50,5 @@ To generate reward curves, confusion matrices, or other performance plots: ```ba
 - All datasets are publicly available for research purposes
 - Check individual dataset licenses and terms of use before downloading
 - Consider computational requirements for processing large datasets
+- All trained models will be saved in the models/ folder.
 
