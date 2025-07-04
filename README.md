@@ -33,6 +33,7 @@ Make sure Python 3.8+ is installed, then run: ``` pip install -r requirements.tx
 
 ### 3. Prepare the Datasets
 Download the datasets listed in the Datasets section and place the raw files (CSV) into the `data/` directory.
+
 Then preprocess the data: ``` python data_preprocessing.py ```
 
 ### 4. Initialize the Custom Environment
@@ -40,10 +41,11 @@ Then preprocess the data: ``` python data_preprocessing.py ```
 
 ### 5. Train the Model
 Run the training script for the Hierarchical Deep Q-Network (h-DQN): ``` python train.py ```
+
 You'll receive evaluation metrics like accuracy, precision, recall, and F1-score.
 
 ### 5. Visualize Results (Optional)
-To generate reward curves, confusion matrices, or other performance plots: ```bash python visualization_diagrams.py ```
+To generate reward curves, confusion matrices, or other performance plots: ``` python Visualization.py ```
 
 ## Usage Notes
 
