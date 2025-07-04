@@ -32,47 +32,25 @@ This project leverages four publicly available intrusion detection datasets. Eac
 
 Follow the steps below to run the full pipeline for the **Hierarchical Reinforcement Learning Intrusion Detection System**.
 
-### 1. Clone the Repository
+### 1. Clone the Repository 
+```bash git clone https://github.com/alkistissyt/hDQN-IDS.git
+cd alkistissyt/hDQN-IDS```
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-```
-
-### 1. Install Dependencies
-
+### 2. Install Dependencies
 Make sure Python 3.8+ is installed, then run: ```bash pip install -r requirements.txt ```
 
 ### 3. Prepare the Datasets
-
 Download the datasets listed in the Datasets section and place the raw files (CSV) into the `data/` directory.
+Then preprocess the data: ```bash python data_preprocessing.py ```
 
-Then preprocess the data:
-
-```bash
-python data_preprocessing.py
-```
-
-### 4. Initialize the Custom Environment 
-```bash
-python Environment.py
-```
+### 4. Initialize the Custom Environment ```bash python Environment.py ```
 ### 5. Train the Model
-
-Run the training script for the Hierarchical Deep Q-Network (h-DQN):
-
-```bash
-python train.py
-```
+Run the training script for the Hierarchical Deep Q-Network (h-DQN): ```bash python train.py ```
 You'll receive evaluation metrics like accuracy, precision, recall, and F1-score.
 
-### 6. Visualize Results (Optional)
+### 5. Visualize Results (Optional)
+To generate reward curves, confusion matrices, or other performance plots: ```bash python visualization_diagrams.py ```
 
-To generate reward curves, confusion matrices, or other performance plots:
-
-```bash
-python visualization_diagrams.py
-```
 ## Usage Notes
 
 - All datasets are publicly available for research purposes
