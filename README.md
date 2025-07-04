@@ -33,8 +33,10 @@ This project leverages four publicly available intrusion detection datasets. Eac
 Follow the steps below to run the full pipeline.
 
 ### 1. Clone the Repository 
-``` bash git clone https://github.com/alkistissyt/hDQN-IDS.git
-cd alkistissyt/hDQN-IDS ```
+```
+bash git clone https://github.com/alkistissyt/hDQN-IDS.git
+cd alkistissyt/hDQN-IDS
+```
 
 ### 2. Install Dependencies
 Make sure Python 3.8+ is installed, then run: ``` bash pip install -r requirements.txt ```
