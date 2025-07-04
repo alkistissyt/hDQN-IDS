@@ -39,11 +39,11 @@ cd alkistissyt/hDQN-IDS
 ```
 
 ### 2. Install Dependencies
-Make sure Python 3.8+ is installed, then run: ``` bash pip install -r requirements.txt ```
+Make sure Python 3.8+ is installed, then run: ``` pip install -r requirements.txt ```
 
 ### 3. Prepare the Datasets
 Download the datasets listed in the Datasets section and place the raw files (CSV) into the `data/` directory.
-Then preprocess the data: ```bash python data_preprocessing.py ```
+Then preprocess the data: ``` python data_preprocessing.py ```
 
 ### 4. Initialize the Custom Environment
 ```bash python Environment.py ```
