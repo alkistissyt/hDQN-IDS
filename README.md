@@ -10,8 +10,8 @@ The core of the implementation is structured across four main Python scripts:
 
 - `data_preprocessing.py`: Loads, cleans, and prepares the CIC-IDS2017 dataset.
 - `environment.py`: Defines a custom OpenAI Gym environment, including reward logic and interaction with the HRL agent.
-- `train.py`: Trains a Hierarchical Deep Q-Network (h-DQN) model using the custom environment.
-- `evaluate.py`: Evaluates the trained model using classification metrics (accuracy, precision, recall, F1-score).
+- `train.py`: Training pipeline for both worker and manager agents
+- `Visualisation.py`: Evaluates the trained model using classification metrics (accuracy, precision, recall, F1-score).
 
 ## 🚀 Getting Started
 
@@ -23,11 +23,6 @@ The core of the implementation is structured across four main Python scripts:
   ```bash
   pip install -r requirements.txt
 
-
-  # Hierarchical DQN for Intrusion Detection
-
-A reinforcement learning-based intrusion detection system using hierarchical Deep Q-Networks (h-DQN) with adaptive computational cost management. **This repository contains the implementation for my Master's thesis research.**
-
 ## 🎯 What This Offers
 
 - **Hierarchical Architecture**: Manager agent selects detection mode, Worker agent makes classification decisions
@@ -38,39 +33,7 @@ A reinforcement learning-based intrusion detection system using hierarchical Dee
 
 ## 🚀 Quick Start
 
-### Install Dependencies
-```bash
-pip install stable-baselines3[extra] gymnasium scikit-learn pandas numpy matplotlib seaborn
-```
 
-### 1. Preprocess Your Dataset
-```python
-from data_preprocessing import DataProcessor
-
-processor = DataProcessor(variance_threshold=0.95)
-X_train, X_test, y_train, y_test = processor.process_dataset('your_dataset.csv')
-```
-
-### 2. Train the Models
-```python
-from train import DQNTrainer
-
-trainer = DQNTrainer()
-trainer.load_data('your_dataset.csv')
-
-# Train worker then manager
-worker_model = trainer.train_worker_agent()
-manager_model = trainer.train_manager_agent()
-
-# Evaluate
-results = trainer.evaluate_models()
-```
-
-### 3. Run Complete Pipeline
-```bash
-python train.py
-# Follow prompts to select dataset file
-```
 
 ## 📁 Files
 
@@ -102,15 +65,3 @@ python train.py
 | Edge-IIoTset | 15 types | 60+ features |
 | BoT-IoT | 5 types | 40+ features |
 
-## 🎓 Thesis Context
-
-This implementation is part of my Master's thesis on hierarchical deep reinforcement learning for network intrusion detection with computational cost optimization.
-
-## 📞 Contact
-
-[Your Name] - [Your Email]  
-[University Name]
-
----
-
-⭐ **Star if this helps your research!**
