@@ -6,7 +6,7 @@ A reinforcement learning-based intrusion detection system using **hierarchical D
 ## Project Structure
 - `Preprocessing.py` - Generic preprocessing with adaptive PCA for multiple IDS datasets 
 - `Environment.py` - RL environments with hierarchical architecture, smart features, and adaptive computational cost management
-- `train.py`  - Complete training pipeline for both worker and manager agents with enhanced metrics tracking
+- `Train.py`  - Complete training pipeline for both worker and manager agents with enhanced metrics tracking
 - `Visualization.py` - Publication-ready visualization generation using actual training results and performance data
 
 ## Datasets
