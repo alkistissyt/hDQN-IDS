@@ -1,7 +1,7 @@
 """
 Visualization Diagrams for Hierarchical DQN Intrusion Detection
 Connects with training results and evaluation metrics from train.py
-Generates publication-ready plots for thesis results
+Generates publication-ready plots
 """
 
 import numpy as np
