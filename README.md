@@ -3,7 +3,7 @@
 # A Hierarchical Reinforcement Learning Framework for Resource-Aware Intrusion Detection
 A reinforcement learning-based intrusion detection system using **hierarchical Deep Q-Networks (h-DQN)** with adaptive computational cost management. This repository supports my bachelor thesis on designing and implementing a hierarchical reinforcement learning (HRL) system for intrusion detection using multiple network security datasets. The framework aims to detect network intrusions while balancing detection performance with computational resource usage.
  
-## 🎯 What This Offers
+## What This Offers
 
 - **Hierarchical Architecture**: Manager agent selects detection mode, Worker agent makes classification decisions
 - **Resource Management**: A Manager agent is introduced to handle intelligent resource allocation. Based on real-time system load and threat level assessments, the agent selects between lightweight and intensive analysis modes
@@ -12,13 +12,13 @@ A reinforcement learning-based intrusion detection system using **hierarchical D
 - **Smart Cost Management**: Dynamic computational costs based on system queue length
 - **Enhanced Rewards**: Realistic reward structure for intrusion detection scenarios
 
-## 📂 Project Structure
+## Project Structure
 - `data_preprocessing.py` - Generic preprocessing with adaptive PCA for multiple IDS datasets 
 - `environment.py` - RL environments with hierarchical architecture, smart features, and adaptive computational cost management
 - `train.py`  - Complete training pipeline for both worker and manager agents with enhanced metrics tracking
 - `Visualization.py` - Publication-ready visualization generation using actual training results and performance data
 
-## 📊 Datasets
+## Datasets
 This project leverages four publicly available intrusion detection datasets. Each offers different characteristics and attack types suitable for evaluating network-based detection systems. Download them using the links below:
 
 | Dataset | Description | Features | Samples | Size | Download |
@@ -28,17 +28,7 @@ This project leverages four publicly available intrusion detection datasets. Eac
 | **Edge-IIoTset** | Realistic IoT/IIoT dataset with diverse devices and attacks for edge computing | 61 | 2M | Large | [IEEE DataPort](https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications) |
 | **BoT-IoT** | Large-scale IoT network dataset with DDoS, DoS, scanning, and botnet attacks | 10 | 600k | Small | [UNSW Canberra](https://research.unsw.edu.au/projects/bot-iot-dataset) |
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.8+
-- Required libraries (install via pip):
-  
-  ```bash
-  pip install -r requirements.txt
-
-## 🚀 Usage
+##  Usage
 
 Follow the steps below to run the full pipeline for the **Hierarchical Reinforcement Learning Intrusion Detection System**.
 
@@ -51,11 +41,7 @@ cd your-repo-name
 
 ### 1. Install Dependencies
 
-Make sure Python 3.8+ is installed, then run:
-
-```bash
-pip install -r requirements.txt
-```
+Make sure Python 3.8+ is installed, then run: ```bash pip install -r requirements.txt ```
 
 ### 3. Prepare the Datasets
 
