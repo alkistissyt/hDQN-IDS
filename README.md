@@ -1,4 +1,4 @@
-# hDQN-IDS
+ # hDQN-IDS
 
 # A Hierarchical Reinforcement Learning Framework for Resource-Aware Intrusion Detection
 A reinforcement learning-based intrusion detection system using **hierarchical Deep Q-Networks (h-DQN)** with adaptive computational cost management. This repository supports my bachelor thesis on designing and implementing a hierarchical reinforcement learning (HRL) system for intrusion detection using multiple network security datasets. The framework aims to detect network intrusions while balancing detection performance with computational resource usage.
@@ -30,20 +30,21 @@ This project leverages four publicly available intrusion detection datasets. Eac
 
 ##  Usage
 
-Follow the steps below to run the full pipeline for the **Hierarchical Reinforcement Learning Intrusion Detection System**.
+Follow the steps below to run the full pipeline.
 
 ### 1. Clone the Repository 
-```bash git clone https://github.com/alkistissyt/hDQN-IDS.git
-cd alkistissyt/hDQN-IDS```
+``` bash git clone https://github.com/alkistissyt/hDQN-IDS.git
+cd alkistissyt/hDQN-IDS ```
 
 ### 2. Install Dependencies
-Make sure Python 3.8+ is installed, then run: ```bash pip install -r requirements.txt ```
+Make sure Python 3.8+ is installed, then run: ``` bash pip install -r requirements.txt ```
 
 ### 3. Prepare the Datasets
 Download the datasets listed in the Datasets section and place the raw files (CSV) into the `data/` directory.
 Then preprocess the data: ```bash python data_preprocessing.py ```
 
-### 4. Initialize the Custom Environment ```bash python Environment.py ```
+### 4. Initialize the Custom Environment
+```bash python Environment.py ```
 ### 5. Train the Model
 Run the training script for the Hierarchical Deep Q-Network (h-DQN): ```bash python train.py ```
 You'll receive evaluation metrics like accuracy, precision, recall, and F1-score.
