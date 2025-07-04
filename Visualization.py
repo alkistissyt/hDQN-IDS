@@ -111,8 +111,6 @@ class ThesisVisualizer:
     def _plot_example_training_progress(self, save_path: str):
         """Generate example training progress plot"""
         timesteps = np.arange(0, 200000, 2000)
-        
-        # Generate realistic training curves
         np.random.seed(42)
         
         # Worker accuracy
@@ -410,7 +408,7 @@ def main():
     
     create_summary_table(example_results)
     
-    print(f"\n✅ All thesis visualizations generated successfully!")
+    print(f"\n All visualizations generated successfully!")
     print(f"Files created:")
     print(f"- training_progress.png")
     print(f"- performance_comparison.png") 
