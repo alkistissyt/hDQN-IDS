@@ -2,7 +2,7 @@
 
 # A Hierarchical Reinforcement Learning Framework for Resource-Aware Intrusion Detection
 A reinforcement learning-based intrusion detection system using **hierarchical Deep Q-Networks (h-DQN)** with adaptive computational cost management. This repository supports my bachelor thesis on designing and implementing a hierarchical reinforcement learning (HRL) system for intrusion detection using multiple network security datasets. The framework aims to detect network intrusions while balancing detection performance with computational resource usage.
-
+ 
 ## 🎯 What This Offers
 
 - **Hierarchical Architecture**: Manager agent selects detection mode, Worker agent makes classification decisions
