@@ -34,6 +34,24 @@ unb.ca
 -BoT‑IoT – IoT network dataset containing DDoS, DoS, scanning, and more.
 Official download (UNSW Canberra/Impact Cyber Trust): https://research.unsw.edu.au/projects/bot-iot-dataset 
 
+Datasets
+This project uses four publicly available intrusion detection datasets. Each offers different characteristics and attack types suitable for evaluating network-based detection systems.
+
+🔹 CIC‑IDS2017
+A modern dataset containing labeled benign and attack traffic captured in realistic network conditions, including DoS, DDoS, brute force, infiltration, and web-based attacks.
+📁 Formats: CSV, PCAP
+📍 Source: Canadian Institute for Cybersecurity (UNB)
+
+🔹 NF‑ToN‑IoT
+A NetFlow-based version of the ToN‑IoT dataset tailored for IoT networks. Includes multi-class attack labels (e.g., DDoS, injection, ransomware, backdoor) and represents industrial and consumer IoT environments.
+📁 Formats: NetFlow CSV
+📍 Source: University of Queensland
+
+🔹 Edge‑IIoTset
+A comprehensive and realistic cybersecurity dataset for edge and industrial IoT (IIoT) applications. Covers a wide range of attacks across multiple edge devices with time-sequenced behavior.
+📁 Formats: CSV
+📍 Source: IEEE DataPort
+
 ## 🚀 Getting Started
 
 ### Prerequisites
