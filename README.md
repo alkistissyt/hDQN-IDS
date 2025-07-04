@@ -18,6 +18,22 @@ A reinforcement learning-based intrusion detection system using **hierarchical D
 - `train.py`  - Complete training pipeline for both worker and manager agents with enhanced metrics tracking
 - `Visualization.py` - Publication-ready visualization generation using actual training results and performance data
 
+  📂 Datasets
+Download each dataset directly from the official sources:
+
+CIC‑IDS2017 – Benign and modern attack traffic, in CSV/PCAP formats.
+Official download: http://www.unb.ca/cic/datasets/ids-2017.html 
+
+NF‑ToN‑IoT – NetFlow version of ToN‑IoT, labeled for multiple IoT attack types.
+Official download: https://espace.library.uq.edu.au/view/UQ%3A44d7c5e 
+
+Edge‑IIoTset – Realistic IoT/IIoT dataset with diverse devices and attacks.
+Official download (IEEE DataPort): https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications 
+unb.ca
+
+BoT‑IoT – IoT network dataset containing DDoS, DoS, scanning, and more.
+Official download (UNSW Canberra/Impact Cyber Trust): https://research.unsw.edu.au/projects/bot-iot-dataset 
+
 ## 🚀 Getting Started
 
 ### Prerequisites
