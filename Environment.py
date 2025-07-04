@@ -734,7 +734,7 @@ def create_environment_with_real_data(data_path: str = 'processed_data.npz',
                                     use_train_data: bool = True,
                                     max_episodes: int = 1000):
     """
-    Create environment using real preprocessed data
+    Create environment using preprocessed data
     
     Args:
         data_path: Path to preprocessed data
@@ -876,7 +876,7 @@ def main():
     print(f"hierarchical_env = EnvironmentFactory.create_hierarchical_environment(")
     print(f"    X_train, y_train, trained_worker_agent, max_episodes)")
     
-    print(f"\n✅ Environment successfully connected to real intrusion detection dataset!")
+    print(f"\n Environment successfully connected to real intrusion detection dataset!")
     print(f"   Ready for training with {worker_env.data_size} real network traffic samples.")
 
 if __name__ == "__main__":
